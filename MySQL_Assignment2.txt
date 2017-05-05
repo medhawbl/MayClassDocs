@@ -1,0 +1,16 @@
+
+Assignement-2
+
+Find min salary of employees grouped by department
+
+Also write a query to decide tax brackets based on employee salary.
+Eg: 10k-20k – 10% tax
+20k-30k – 15% tax
+
+Query to Display  date and number  in given format – eg- mm-dd-yyyy , $6,500.00
+
+query that fetches first_name, salary, hiredate in dd-mm-yyyy format all employees who joined after 12-nov-2010
+
+
+
+Training@whitebox-learning.com
