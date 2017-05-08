@@ -1,0 +1,11 @@
+Write a query to Select first_name, dept name, deptid,salary  from employees table and departments table  based on all the common column. 
+Write a query to Select first_name, dept name, deptid,salary  from employees table and departments table  based on dept id
+Write a query to Select  city, firstname, deptname  for an employee 
+Write a query to fetch  empname, deptname and deptid  of all the departments with and without employees.
+query to find min sal under each job category in specific  department.
+
+fetch employees whose salary is less than salaries of  employee with job_id IT_PROG
+
+write a query to select first_name and hiredate of employees who were hired after employee Steven.
+
+query to find employee details of first highest salaried person.
