@@ -1,0 +1,271 @@
+Testing Fundamentals:
+
+Testing - is a process.
+Testing the product against the requirement document.(SRS, BRD, Rally, Jira, Wiki links)
+
+dev - in development phase  
+sit - system integration phase
+uat - user acceptance phase
+prod - live
+
+dev qa1  qa2  live(prod)
+
+Verification - As per the requirement, it is working fine or not
+it will be done by developer. whitebox testing
+Validation - As per the requirement, it is working fine or not along with that he will try 
+to check some user activities(navigatoins, links, positive, negative scenarios, performance, 
+security, configuration, compatability)
+it will be done by QA/Tester. Black box testing
+
+Whitebox Testing- Testing the functionality by knowing the design and code details
+in whitenox testing we write code to test the code.
+generally dev will do it - unit testing
+
+public string even(long num){
+if(num%2 == 0){
+return even
+}else{
+return odd
+}
+}
+2, 5 , 10, 6787908, -7897, 0, 1
+ghghjh, $%*, 7ggjh, 
+
+@test
+public void testEven(){
+actual  = even(6);
+expected = even;
+if(actual == expected){
+log(it is evn)
+}else{
+log(it is odd)
+}
+g76hjhlhlkhl
+
+
+
+Blackbox Testing- Testing the functionality by no knowing the code details
+done by qa
+
+Testcase : can be written in excel/word/rally/jira
+
+What testcase consist of:
+Date, Author name, company
+TestcaseID
+Description
+priority 
+Precondition
+TestSteps
+TestData
+expected - according to the req doc
+actual - result
+status - pass/fail
+notes
+screenshot
+
+QA should do basic debugging before raising a defect.
+I would check browser dev tools(inspect/ F12) console, network tab to figure out 
+any client side logs in console, API issue in network tab.
+It i could not find any reasin by dev tools I would further check server logs
+(by connecting to the Unix server machine)
+
+Once we do basic debugging we would know whether the issue is in client side, APIside, 
+server side logic or in database or with the deployment.
+
+Retesting - Test the defect that is fixed to make sure if it is properly fixed
+Regression Testing - After the defect fix or enchancement we try to test already
+tested functionalities to make sure that new enchancement or defect fix did not break 
+the existing things.
+
+Testing Phases:
+
+Unit Testing - Whitebox testing
+TDD  - test driven development - based on the input/test changing the code
+BDD - behaviour driven developemnt- cucumber, jasmine
+Login 
+register
+search
+addtocart
+
+Integration Testing
+1) SystemIntegration Testing
+2) ComponentIntegration Testing
+
+we have 3 diff approaches:
+bigbang
+Topdown
+bottomup
+
+System Testing
+User Acceptance testing
+ProductionValidation/Testing
+
+System Testing:
+Functional Testing - 
+Performanance testing - concurrent users to application
+-What do we analyze in performance testing
+Response time - time to get total response
+Latency - time taken to get the first byte of information
+Throughput - no of requests server per unit time
+Response time, latency should be less, throughput should me more
+
+-Load
+-stress - try to find the break point for application
+-volume - testing with more volume of data in database
+Load Runner, Jmeter, silk performer
+
+Compatabilitytesting
+configuration testing
+OS - 
+Browser
+installations
+versions
+
+Security testing:
+Authentication
+Authorization
+Security questions
+catpta images
+sql injections
+select * from user where username = '' or for 1=1 and password = '' 
+delete the user
+crossside scripting 
+malicious script
+
+Localization - googlemaps
+Internationalization
+Accessibility
+senior citizen
+disabled
+html tags - aria, alt
+
+Testing Techniques:
+
+Blackbox Testing:
+Equivalance partitioning : 1 - 10
+invalid - <1 and >10
+valid - 4, 8
+
+Boundary value analysis: 1 - 10
+invalid - <1 and >10
+valid - 4, 8
+1, 10, 0, 2, 9, 11
+boundary values, just above boundary, just below boundary
+
+Decision Tables :
+stagebased testing
+
+Whitebox Testing
+
+public void multiples(int num){
+if(num%3==0 && num==5){
+div by both 3 n 5
+}elseif(num%3==0){
+div by 3
+}elseif(num%5==0){
+div by 5
+}else{
+it is not div by either 3 or 5
+}
+}
+15, 9, 20, 7, 0, 1, 
+
+statements - 4
+decisions - 4
+conditions - 3
+
+we have to take the data in such a way that we need to satisfy all the statements, 
+deisions, conditions
+
+
+
+if(true){
+int[] arr = new arr[100];
+arr[]
+}
+file
+write
+close
+
+Automation:
+
+1 build - 100tc
+2 build - 150tc + 100tc
+3 build - 50tc + 150 + 100
+
+Why automation?
+efficient usage of time and resource
+regression tc
+data driven driven testing 
+tests which cannot be manually tested(links 500), test attributes
+
+When not to automate:
+application is frequently changing
+tight deadlines
+human intervention - captcha images, audio, video, 
+look n feel- fonts, colors
+
+
+Test framework: - semi finished application, blueprint
+maintainable n readable, to avoid code redundancy
+hardcording of data - properties(userid, pwd, browser, version)
+data driven testing
+assertion(expected and actual results)
+logs
+reports
+combine test cases - test suites
+maven
+
+sample teststrategy n test plan
+http://sce.uhcl.edu/helm/RUP_course_example/courseregistrationproject/artifacts/test/plans/test_plan_arch.htm
+
+SRS, BRD
+Test Stategy - Project manager/ Test manager
+What to do
+Testing types, tools, entry n exit criteria
+scope
+objective
+environment
+resources
+
+
+Test Plan - Test lead
+How to do
+TYpes of testing
+start n end date
+deliverables
+risks
+releases
+
+RTM - to make sure wheater all the requirements are covered or not
+requirements - 
+testcases - 
+
+bug life cycle - 
+open , assigned, fixed, close
+
+Defect terminologies
+showstopper - 
+critical - 
+major-
+medium-
+minor- 
+cosmetic - 
+
+
+Client Server Architectire:
+
+Client(google.com) ----> DNS --->
+
+DNS : google.com : 123.45.23.456
+
+
+Smoke Testing - Prority testcases
+Functionality Testing - All the functionality releated test cases
+Regression Testing - all the smoke testcases n few of funtionality
+Subset of functionality n superset of smoke
+
+
+training@whitebox-learning.com
+
+
