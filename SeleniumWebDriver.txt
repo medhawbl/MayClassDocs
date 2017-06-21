@@ -1,0 +1,84 @@
+PageObject pattern:
+Every page in UI application will have a corresponding Java Page Class and Test Class.
+Main advantage of PageObject pattern is clear separation of testcases which helps for easy maintenance.
+Also it avoids code redundancy.
+
+Page classes - have the logic to identify the WebElement and return back the actual value/elements needed for assertions.
+TestClasses -  assertions 
+
+
+HomePage- test navigations manu, header links, search box,click signin, register....
+SearchResultsPage- test the no of results, valid reslts, sort features(by rating, price), filters...
+SearchDetailsPage-
+AddToCartPage
+
+
+HomePageTest
+SearchResultsPageTest
+SearchDetailsPageTest
+AddToCartPageTest
+
+***********************
+maven,git, jenkins
+
+maven- pom.xml (maven with TestNG)
+git/svn/pvcs- code repository
+TestNG- testng.xml
+
+*****************************
+
+WebDriver:
+
+get
+findElement
+findElements
+getTitle
+
+close - close the browser 
+quit
+windowhandle
+windowhandles
+
+WebElement:
+
+click- we can click on link or button
+sendKeys- to send/input text into the text boxes
+getText- to get inner text of an element
+
+getAttribute
+isSelected
+isEnabled
+isDisplayed
+
+DropDowns:
+Select
+selectByIndex
+selectByVisibleText
+selectByValue
+
+
+
+**********************
+
+go to kp.org
+click on search button
+select doctors from dropdown and enter doctors in search box - click search button
+searchResults
+
+***********
+3 packages:
+com.wbl.page
+com.wbl.base
+com.wbl.test
+
+created 3 page classes, 3 test classes, 1 BaseTest Class
+PAgeclasses- lgoic to identify elements , page classes need driver- which we injected by using construtcor
+TestClasses - we have to call page class methods and add assertions once we get actual,to call page classes we should pass driver object
+which we inherit from BaseTest
+BaseTest- we created driver using BeforeClass annotation
+
+https://github.com/medhawbl/MayClassDocs
+https://github.com/medhawbl/MayClassCode
+
+
+
