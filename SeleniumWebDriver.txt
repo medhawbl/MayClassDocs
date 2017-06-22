@@ -43,7 +43,7 @@ WebElement:
 
 click- we can click on link or button
 sendKeys- to send/input text into the text boxes
-getText- to get inner text of an element
+getText()- to get inner text of an element
 
 getAttribute
 isSelected
@@ -79,6 +79,81 @@ BaseTest- we created driver using BeforeClass annotation
 
 https://github.com/medhawbl/MayClassDocs
 https://github.com/medhawbl/MayClassCode
+****************
+Thread.sleep(3000);// by default pause program execution
+
+element is loaded immediately
+its taking time to load the element 
+
+
+Waits:
+
+ImplicitWait: implicit wait waits for any of the element that takes time to load in webpage/poll the DOM.
+default is 0 seconds.
+
+driver.manage().timeouts().implicitlWait(20, TimeUnit.SEONDS);
+
+It wil initially check if the element is present , if its found then it will not wait for given wait time 20secoonds
+if it is not found 0 then it waits for complete wait time(eg:20seconds) even though element is avaialble within 10 or 15 seconds.
+
+Meaning which it checks first at 0th sec and after 20 seconds- not in between
+
+
+ExplicitWait:
+It waits for a specific element or condition
+		
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element =wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".prime-button-try>a")));
+		element.click();
+		
+It wil initially check if the element is present , if its found then it will not wait for given wait time(20secoonds)
+
+if it is not found at 0th sec then it starts waiting for given waittime
+but it keeps checking in between by default for every 500ms if element is found- if it is found then it will not wait for entire time
+20seconds
+0th
+500ms
+.....
+10th sec or 15th sec - 
+
+Fluent Wait: 
+is s type of explicit wait where we have option o override the polling/frequency time
+and we have other option like ignoringException...
+
+both explicit wait and fluent wait have method - wait.until- which accepts
+ExpectedConditions, Function and Predicate.
+Predicate(I) has apply method where output is always boolean and any input type
+but in function(I) you can have your own output and input types in method.
+
+
+
+
+Actions:
+mouse hover
+moveTo
+perform
+
+right click
+drag and drop
+
+Assignment:
+
+Facbook- registartion form submission
+Amazon - go to Accounts&Lists and clcik on SIgnIn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
