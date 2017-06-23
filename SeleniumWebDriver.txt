@@ -136,12 +136,35 @@ perform
 right click
 drag and drop
 
+
+navigate:
+to
+back
+forward
+refresh
+
+***************
+Headless browsers:
+
+HtmlUnitDriver
+PhantomJs....
+
+
+
+
 Assignment:
+Facebook- registration form submission
+Amazon - go to Accounts&Lists and click on SignIn
 
-Facbook- registartion form submission
-Amazon - go to Accounts&Lists and clcik on SIgnIn
 
+hidden element example
+delete cookie
 
+css seletors
+DesiredCapabilities
+FIleUpload
+Tables
+datepicker
 
 
 
