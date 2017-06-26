@@ -165,9 +165,105 @@ DesiredCapabilities
 FIleUpload
 Tables
 datepicker
+*****************************
+css selector:
 
 
+[id='idValue'] or #idvalue
+[class='classValue'] or .classValue
+[name='nameValue']
+[attributeName='attributeValue']
 
+#fblogin>button - direct child
+#fblogin i - any child
+
+#bUYZ-origin
+#c_86m-origin
+
+[id^='a71V']- starts-with
+[id$='a71V']- end-with
+[id*='a71V']- contains
+
+
+[attributename^='attributevalue']- starts-with
+
+[attributename$='attributevalue']]- end-with
+
+[attributename*='attributevalue']- contains
+
+.pull-right.social-icons li:nth-child(3)
+
+.pull-right.social-icons li:nth-of-type(3)
+
+
+sibling -- +
+.logo.col-md-4.col-sm-4+div
+
+https://saucelabs.com/resources/articles/selenium-tips-css-selectors
+
+
+xpath:
+
+absolute xpath: traverse from the root of the html document all the way to the element,
+It is lengthy.
+It is not preferred bcz it is complex and if any new elements ar added or deleted in betweenwe need to
+again modify our locator.
+
+/html/body/header/div/div/button....
+
+/html/body/header/div[2]/div/ul/li[1]/a/button
+
+relative xpath: Directly identify the element by using its attribute values.
+It is shorter than absolute xpath
+
+//*[@attrname='attrvalue']
+
+//*[@id='headerfblogin']
+
+//*[starts-with(@id,'header')]
+//*[contains(@id,'header')]
+
+//*[contains(text(),'hear')] - to identify element using inner text of the element
+
+//*[starts-with(@attrbutename,'attrvalue')]
+
+//div[@id='navbar-collapse']/ul/li[3]
+
+.//*[@class='hidden-xs top-bar']/following::div[1]
+.//*[@class='header-main container']/preceding::div[2]
+
+//*[@class='logo col-md-4 col-sm-4']/following-sibling::div
+//*[@class='logo col-md-4 col-sm-4']/preceding-sibling::div
+
+xpath- xpath is complex to write 
+we can traverse forward and also backward in a dom using xpath
+we can isentify the lement using its inner text als0 if required by using text()
+which we cannot do in css selectors
+
+css selectors- is simple, easier, faster and more cross browser compatable.
+we can traverse only forward in a dom using css selector
+****************************************
+FileUpload- 
+
+windows based interactions as part of web application
+selenium cannot handle desktop based interactions.
+ 
+we can handle desktop based interactions using
+1. Autoit 
+2. Robot class(java.awt)
+
+https://www.autoitscript.com/site/autoit/
+
+download autoit
+
+part1: script to handle desltop file upload interactions
+to learn about autoit framework methods use-  C:\Program Files (x86)\AutoIt3\AutoIt help file
+open C:\Program Files (x86)\AutoIt3\Au3Info_x64 - which is finder tool(like firepath)
+open C:\Program Files (x86)\AutoIt3\SciTE\sciTE- text editor- type the code and save as autoit file,
+then compile to generate .exe
+ 
+part2: embed the script with web application using selenium
+Once .exe is ready - we wil use this in selenium automation script
 
 
 
