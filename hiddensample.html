@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>A demonstration of how to access a Hidden Input Field</h3>
+
+<input type="hidden" id="myInputHidden" value="W3Schools">
+
+<input  id="myInput" value="W3Schools">
+
+<p>Click the button to get the value of the hidden input field.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myInput").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

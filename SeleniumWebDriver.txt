@@ -266,6 +266,105 @@ part2: embed the script with web application using selenium
 Once .exe is ready - we wil use this in selenium automation script
 
 
+***************
+buttons
+links
+dropdown menus
+multple windows 
+alerts
+radio button.check boxes
+pagination
+infiite scrolling
+bread crumbs
+********
+
+JavaScriptExecutor
+// script to check if page is loaded completely
+((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
+		
+hidden element
+delete cookie
+table:
+
+//*[@id='mytable']/tbody/tr/td[2]
+
+#mytable>tbody>tr:nth-of-type(2)
+
+
+Alerts 4 types:
+
+1. java script alerts
+cannot right click-- 
+These type of alerts can be handled by Alert class in selenium
+
+window.alert
+window.prompt
+window.confirm
+
+
+2. Modal popups / html popups
+driver.get("http://www.softwaretestinghelp.com/")
+
+wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector([title='close']))).click();
+
+send keys
+
+
+3. Desktop/window based popups
+Handle using Robot or AutoIt
+but best is robot
+
+
+4. browser notifications
+we can handle using DesiredCapabilities
+ChromeOptions
+FirefoxProfile
+
+
+
+Desired capabilties- 
+Settings needed for selenium grid where we want to specify RemoteWebDriver class about
+browser name, version and OS (platform name) details.
+
+Mobile AUtomation- appium- we use desired capabilties to give platform, device and app details
+
+Also we can handle browser specific settings like handling notifications, clean session, enable javascript etc
+
+Firefox and chrome have spefic classess again on top of DesiredCapabilities as below:
+ChromeOptions
+FirefoxProfile
+
+
+
+https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities
+https://github.com/SeleniumHQ/selenium/wiki/Grid-Platforms
+
+**********
+broken links:
+
+http://www.seleniumeasy.com/selenium-tutorials/how-to-find-broken-links-using-webdriver-java
+
+**************
+
+Automation Framework- 
+
+PageObject
+
+***
+Assignement:
+
+walmart.com
+go to all department in nav menu
+go to electronics and office
+tvs- click
+assert for page title
+assert Showing 1-40 of 2,870 products
+verify the below breadcrums are working fine.
+Electronics/ TV & Video/ Shop TVs by Size
+
+
+
+
 
 
 
