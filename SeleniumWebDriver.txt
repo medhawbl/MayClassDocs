@@ -361,6 +361,131 @@ assert for page title
 assert Showing 1-40 of 2,870 products
 verify the below breadcrums are working fine.
 Electronics/ TV & Video/ Shop TVs by Size
+******************************************
+
+Automation Framework:
+
+It is created to reuse the code(avoid redundancy) and application is easy to maintain.
+PageObject, KeyWord driven, Data Driven, Modular , etc...
+
+PageObject , Datadriven - Hybrid pattern (combination of one or more patterns)
+
+10 screens/pages in your UI application
+
+20 java classes-
+10 page  classes
+10 test classes
+
+PageObject: It is a design pattern which we use in test automation which helps
+test maintenance and reduces code duplication.
+Page Classes have the methods created to perfom selenium actions on the element
+Test Classes will call the Page class methods , get the actual data and assert with expected data.
+
+advantages:
+
+Clean separation between test code and page code
+Single repository for all testcases of respective page which makes modifications(add or delete functionalty in page)
+easier as testcases are not scattered randomly in java classes.
+
+DataDriven:
+Execute same script with different sets of data,
+We store all the test data in external file (excel/csv) and tests are driven with data using these external files
+
+Explain about automation framework:
+
+we created  automation fw to reuse the code(avoid redundancy) and application is easy to maintain.
+we used PageObject and Data Driven combination in our project.
+Based on any programing language(Java),
+We create PageClasses using SeleniumWebDriver, test classes using any unit test framework(TestNG)
+we create some base/parent classes to handle common code.
+We inject the driver object that is need in all page classes using a common mechanism(depenedency injection)
+we can create webdriver object easier way by using Java Factory design pattern.
+We create some utilities/helper classes which  will be static methods(Java) to deal with common/reusable functionalties.
+eg: WebDriverUtil, ExcelReader, TakeScreenShot, Waits, PropertiesFileReader etc....
+We use TestNG for assertions, testcase managment using testng xml files where we can combine different testcases
+as test suites.We can group testcases, we can handle dependent testcases(one test execution is depenedent on other),
+we can prioritize test cases, we can make use of inbuilt html/xml reports from TestNG,(we can also customize
+the reports using Ireporter,ITestListener- listener, we can customize logs using apache log4j and TestNG-TestListeneradapter.
+)
+we have resources folder where we maintain all the non java files- excel/properties/ driver executbles...
+we used maven for dependency and build managment(we execute tests by using maven cmds like mvn test, mvn clean install)
+(for this we integarte maven and testng together using maven surefire plugin config in pom.xml)
+
+we are also using git as code repository and jenkins for CI and CD.
+
+
+
+
+
+
+Selenium WebDriver
+TestNG
+Java
+Maven 
+PageObject
+ExceptionHandling
+Reports
+Git
+
+
+LoginPage{
+
+
+login(){
+
+username
+password
+submit
+
+
+}
+
+LoginPageTest{
+actaul= login()
+assertEqauls(actual, expected);
+}
+
+
+
+Wellsfargo
+
+Loan Origination System
+
+calculate
+
+EMI- Pricing Calculator 
+input 
+ouput
+
+DataDriven Testing:
+
+We can read using Apache POI or JXL jar.
+
+load file into workbook object
+read row by row
+for evry row read column by column
+read the column data and store in 2 dimensional Object array
+
+
+
+XSSFWorkbook
+XSSFSheet
+XSSFRow
+XSSFCell
+
+
+log4j - 
+
+logging levels:
+all
+
+debug
+info
+warn
+error
+fatal
+
+http://www.baeldung.com/log4j2-appenders-layouts-filters
 
 
 
