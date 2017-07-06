@@ -401,7 +401,7 @@ we create some base/parent classes to handle common code.
 We inject the driver object that is need in all page classes using a common mechanism(depenedency injection)
 we can create webdriver object easier way by using Java Factory design pattern.
 We create some utilities/helper classes which  will be static methods(Java) to deal with common/reusable functionalties.
-eg: WebDriverUtil, ExcelReader, TakeScreenShot, Waits, PropertiesFileReader etc....
+eg: WebDriverUtil, ExcelReader, TakeScreenShot,  PropertiesFileReader etc....
 We use TestNG for assertions, testcase managment using testng xml files where we can combine different testcases
 as test suites.We can group testcases, we can handle dependent testcases(one test execution is depenedent on other),
 we can prioritize test cases, we can make use of inbuilt html/xml reports from TestNG,(we can also customize
@@ -488,8 +488,12 @@ fatal
 http://www.baeldung.com/log4j2-appenders-layouts-filters
 
 
+Passed
+Failed
+Skipped
 
-
+TestListenerAdapter - to customize logs
+IReporter/ITestLIstener - to customize reports
 
 
 
