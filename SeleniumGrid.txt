@@ -1,0 +1,59 @@
+SeleniumGrid & SauceLabs
+
+Selenium Grid:
+
+When the test suite is larger (more no of testcases) and we have to
+execeute tests in multiple browsers and OperatingSystems.
+
+We need to save time by running tests in parallel.
+
+It will allow to run scripts on different machines and different browsers at same time.
+Chrome in mac
+firefix in mac
+chrome in windows
+firefox in linux
+
+
+It consists of one hub and multiple nodes.
+Hub is a central point that controls all the nodes.
+NOdes are actual machines where execution occurs.
+
+SeleniumGrid:
+We can automate uotp 5 browsers
+
+Hub:
+
+Central point where we load tests
+We wil have one hub in grid which is launched in single machine
+
+
+Download seleniun server jar on hub and also node machines
+
+
+Go to location where u have jar using cmd prompt and execute this cmd to start hub: 
+java -jar selenium-server-standalone-3.4.0.jar -role hub
+java -jar selenium-server-standalone-3.4.0.jar -role hub -port 4446
+
+Go to other achine which you want to use as node , download jar, and Go to location where u have jar using cmd prompt and execute this cmd to start node:
+java -jar selenium-server-standalone-3.4.0.jar -role node -hub http://192.168.15.2:4444/grid/register
+java -jar selenium-server-standalone-3.4.0.jar -role node -hub http://192.168.15.2:4444/grid/register -port 5556
+
+cmd to start node along with browser excutable system property:
+java -Dwebdriver.chrome.driver=C:\Users\WBL\MedhaMayWorkspace\MayAutomationFramework\resources\drivers\chromedriver.exe  -jar selenium-server-standalone-3.4.0.jar -role node -hub http://192.168.15.2:4444/grid/register -port 5556
+
+write the script using eclipse
+In order to use selenium grid- we mainly use 2 classes- DesiredCapabilties(platform/OS, browser, versions)
+and RemoteWebDriver 
+
+
+Cloud Platform: 
+BrowserStack and SauceLabs:
+IAAS- infrastructure as a service 
+
+REf:
+
+https://wiki.saucelabs.com/display/DOCS/Java+Test+Setup+Example#JavaTestSetupExample-Prerequisites
+https://github.com/saucelabs-sample-test-frameworks/Java-TestNG-Selenium
+
+
+
